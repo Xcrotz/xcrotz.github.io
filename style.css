@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 1.5s ease;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#love-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.love-icon {
+    font-size: 80px;
+    color: #FFA5D6;
+    animation: heartbeat 1.5s infinite;
+    text-shadow: 0 0 20px rgba(255, 165, 214, 0.7);
+}
+
+.instruction {
+    color: #ffffff;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+#media-box {
+    width: 100%;
+    height: 450px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+    border: 5px solid rgba(255,255,255,0.6);
+}
+
+.media-content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#lyrics-box {
+    margin-top: 25px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lyric-text {
+    color: #3D0C11; /* Black Cherry */
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.5;
+    padding: 0 10px;
+    animation: textPulse 3s ease-in-out infinite;
+}
+
+.fade-in {
+    animation: blurFade 1.3s ease-in-out;
+}
+
+@keyframes blurFade {
+    from { opacity: 0; filter: blur(15px); transform: scale(1.1); }
+    to { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+@keyframes textPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.hidden { display: none; }
